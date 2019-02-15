@@ -73,13 +73,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Actions\Click.cs" />
+    <Compile Include="Actions\Enter.cs" />
+    <Compile Include="Actions\Select.cs" />
+    <Compile Include="Pages\SignIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignIn.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SignIn.feature</DependentUpon>
+    </Compile>
+    <Compile Include="SignInFunctionalitySteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="SignIn.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SignIn.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
