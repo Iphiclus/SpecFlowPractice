@@ -30,7 +30,7 @@ namespace CSharpSeleniumTestExampleWithSpecFlow
         public void GivenIAmAtTheMyAccountPage()
         {
             driver.Navigate().GoToUrl("http://automationpractice.com/index.php?controller=my-account");
-            Assert.AreEqual("My account - My Store", driver.Title);
+            Assert.AreEqual("Login - My Store", driver.Title);
         }
         
         [When(@"I fill the account email textbox with my email")]
