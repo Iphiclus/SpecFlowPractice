@@ -36,25 +36,27 @@ namespace CSharpSeleniumTestExampleWithSpecFlow
         [When(@"I fill the account email textbox with my email")]
         public void WhenIFillTheAccountEmailTextboxWithMyEmail()
         {
-            
+            enter.Into(Pages.SignIn.EMAIL_TEXTFIELD).Text("xklein@trashmail.com");
+           
         }
         
         [When(@"I fill the password textbox with my password")]
         public void WhenIFillThePasswordTextboxWithMyPassword()
         {
+            enter.Into(Pages.SignIn.PASSWORD_TEXTFIELD).Text("password");
             
         }
         
         [When(@"I click the Sign In button")]
         public void WhenIClickTheSignInButton()
         {
-            
+            click.On(Pages.SignIn.SIGNIN_BUTTON);
         }
         
         [Then(@"I should be at the My account page")]
         public void ThenIShouldBeAtTheMyAccountPage()
         {
-            
+            //Assert.AreEqual("My account - My Store", driver.Title);
         }
     }
 }

@@ -9,8 +9,8 @@ namespace CSharpSeleniumTestExampleWithSpecFlow.Pages
 {
     class SignIn
     {
-        public static By USERNAME_TEXTFIELD = By.XPath("//input[@name='UserName']");
-        public static By PASSWORD_TEXTFIELD = By.XPath("//input[@name='Password']");
-        public static By LOGIN_BUTTON = By.XPath("//input[@name='Login']");
+        public static By EMAIL_TEXTFIELD        = By.XPath("//input[@name='email']");
+        public static By PASSWORD_TEXTFIELD     = By.XPath("//input[@name='passwd']");
+        public static By SIGNIN_BUTTON          = By.CssSelector("button#SubmitLogin.button.btn.btn-default.button-medium");
     }
 }
