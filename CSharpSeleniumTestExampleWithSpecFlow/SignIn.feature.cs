@@ -93,6 +93,78 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Sign in with invalid credentials")]
+        [NUnit.Framework.CategoryAttribute("Signin")]
+        public virtual void SignInWithInvalidCredentials()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign in with invalid credentials", null, new string[] {
+                        "Signin"});
+#line 15
+ this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 16
+ testRunner.Given("I am at the My Account page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 17
+ testRunner.When("I fill the account email textbox with an incorrect email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+ testRunner.And("I fill the password textbox with an incorrect password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+ testRunner.And("I click the Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+ testRunner.Then("I should get an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Sign in with invalid password")]
+        [NUnit.Framework.CategoryAttribute("Signin")]
+        public virtual void SignInWithInvalidPassword()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign in with invalid password", null, new string[] {
+                        "Signin"});
+#line 23
+ this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 24
+ testRunner.Given("I am at the My Account page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.When("I fill the account email textbox with my email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+ testRunner.And("I fill the password textbox with an incorrect password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+ testRunner.And("I click the Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+ testRunner.Then("I should get an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Sign in with invalid email")]
+        [NUnit.Framework.CategoryAttribute("Signin")]
+        public virtual void SignInWithInvalidEmail()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign in with invalid email", null, new string[] {
+                        "Signin"});
+#line 31
+ this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 32
+ testRunner.Given("I am at the My Account page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 33
+ testRunner.When("I fill the account email textbox with an incorrect email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 34
+ testRunner.And("I fill the password textbox with my password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.And("I click the Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.Then("I should get an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

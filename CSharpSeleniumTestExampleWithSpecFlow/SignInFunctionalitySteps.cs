@@ -60,6 +60,24 @@ namespace CSharpSeleniumTestExampleWithSpecFlow
             Assert.AreEqual("MY ACCOUNT", driver.FindElement(Pages.SignIn.STEST_SITE_HEADER).Text);
         }
 
+        [When(@"I fill the account email textbox with an incorrect email")]
+        public void WhenIFillTheAccountEmailTextboxWithAnIncorrectEmail()
+        {
+            enter.Into(Pages.SignIn.EMAIL_TEXTFIELD).Text("testing@notreal.com");
+        }
+
+        [When(@"I fill the password textbox with an incorrect password")]
+        public void WhenIFillThePasswordTextboxWithAnIncorrectPassword()
+        {
+            enter.Into(Pages.SignIn.PASSWORD_TEXTFIELD).Text("testing");
+        }
+
+        [Then(@"I should get an error message")]
+        public void ThenIShouldGetAnErrorMessage()
+        {
+            Assert.AreEqual("There is 1 error\r\nAuthentication failed.", driver.FindElement(Pages.SignIn.ERROR_MESSAGE).Text);
+        }
+
         [AfterScenario("Signin")]
         public void AfterScenario()
         {
