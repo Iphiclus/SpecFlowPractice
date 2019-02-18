@@ -12,5 +12,6 @@ namespace CSharpSeleniumTestExampleWithSpecFlow.Pages
         public static By EMAIL_TEXTFIELD        = By.XPath("//input[@name='email']");
         public static By PASSWORD_TEXTFIELD     = By.XPath("//input[@name='passwd']");
         public static By SIGNIN_BUTTON          = By.CssSelector("button#SubmitLogin.button.btn.btn-default.button-medium");
+        public static By STEST_SITE_HEADER      = By.XPath("//*[@id='center_column']/h1");
     }
 }

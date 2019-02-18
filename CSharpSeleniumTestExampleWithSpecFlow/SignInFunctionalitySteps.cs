@@ -57,6 +57,14 @@ namespace CSharpSeleniumTestExampleWithSpecFlow
         public void ThenIShouldBeAtTheMyAccountPage()
         {
             //Assert.AreEqual("My account - My Store", driver.Title);
+            Assert.AreEqual("MY ACCOUNT", driver.FindElement(Pages.SignIn.STEST_SITE_HEADER).Text);
+        }
+
+        [AfterScenario("Signin")]
+        public void AfterScenario()
+        {
+            driver.Close();
+            driver.Dispose();
         }
     }
 }
